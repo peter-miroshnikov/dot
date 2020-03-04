@@ -131,3 +131,7 @@ if [ -f '/Users/petermiroshnikov/Downloads/google-cloud-sdk/path.zsh.inc' ]; the
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/petermiroshnikov/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/petermiroshnikov/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
+
+source /Users/petermiroshnikov/Library/Preferences/org.dystroy.broot/launcher/bash/br
+export PATH="/usr/local/opt/libpq/bin:$PATH"
