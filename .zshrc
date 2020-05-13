@@ -67,6 +67,11 @@ ENABLE_CORRECTION="false"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
+
+# source ~/.zsh_plugins.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -75,8 +80,8 @@ ENABLE_CORRECTION="false"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mix docker tmux zsh-autosuggestions zsh-syntax-highlighting)
-
+plugins=(git mix docker fzf  docker-compose tmux zsh-autosuggestions zsh-syntax-highlighting)
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,7 +96,7 @@ export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+   export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
 # fi
@@ -102,36 +107,22 @@ export LC_ALL=en_US.UTF-8
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 . $(brew --prefix asdf)/asdf.sh
-. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
-
-# source ~/.zsh_plugins.sh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-#GCloud Auto Complete
-# source '/Users/petermiroshnikov/google-cloud-sdk/path.zsh.inc'
-# source '/Users/petermiroshnikov/google-cloud-sdk/completion.zsh.inc'
-
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
-#Adding custom aliases
-
+# Example aliases
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 alias k=kubectl
-
+#kube autocompletion
+if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/petermiroshnikov/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/petermiroshnikov/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/petermiroshnikov/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/petermiroshnikov/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
-source /Users/petermiroshnikov/Library/Preferences/org.dystroy.broot/launcher/bash/br
 export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

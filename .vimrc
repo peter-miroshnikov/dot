@@ -44,6 +44,7 @@ Plug '~/my-prototype-plugin'
 " Initialize plugin system
 call plug#end()
 set number
+set mouse=a
 syntax on
 colorscheme onedark
 " Custom keys
