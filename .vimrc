@@ -41,12 +41,16 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
 
+" Golang plugin
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " Initialize plugin system
 call plug#end()
 set number
 set mouse=a
 syntax on
 colorscheme onedark
+set belloff=all
 " Custom keys
 
 map <F2> :NERDTreeToggle<CR>
