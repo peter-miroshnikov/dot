@@ -44,6 +44,9 @@ Plug '~/my-prototype-plugin'
 " Golang plugin
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" Buffergator
+Plug 'jeetsukumaran/vim-buffergator'
+
 " Initialize plugin system
 call plug#end()
 set number

@@ -116,6 +116,7 @@ export LC_ALL=en_US.UTF-8
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias k=kubectl
+alias gog="export GOPATH=`pwd`; go"
 #kube autocompletion
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 # The next line updates PATH for the Google Cloud SDK.
