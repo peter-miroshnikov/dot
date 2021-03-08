@@ -19,10 +19,9 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'https://github.com/tpope/vim-vinegar.git'
 " Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+
 " Colorschemes
-
 Plug 'https://github.com/rakr/vim-one.git'
-
 
 " Custom Plugins
 Plug 'ctrlpvim/ctrlp.vim'
@@ -38,14 +37,22 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-" Unmanaged plugin (manually installed and updated)
-Plug '~/my-prototype-plugin'
-
 " Golang plugin
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Buffergator
 Plug 'jeetsukumaran/vim-buffergator'
+
+" Editor Config
+Plug 'editorconfig/editorconfig-vim'
+
+" powerline stuff
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+" Python Virtual Env Plugin
+Plug 'https://github.com/jmcantrell/vim-virtualenv.git'
 
 " Initialize plugin system
 call plug#end()
@@ -58,5 +65,5 @@ set belloff=all
 
 map <F2> :NERDTreeToggle<CR>
 map <F3> :NERDTreeFind<CR>
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 let NERDTreeShowHidden=1
