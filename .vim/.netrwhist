@@ -1,2 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/Users/pem'
+let g:netrw_dirhist_9='/Users/pem/.config'
+let g:netrw_dirhist_8='/Users/pem/.config/ranger'
+let g:netrw_dirhist_7='/Users/pem/.config/ranger/colorschemes'
+let g:netrw_dirhist_6='/Users/pem/.config/ranger'
+let g:netrw_dirhist_5='/Users/pem/dev/root/tms'
+let g:netrw_dirhist_4='/Users/pem/dev/root/veteranapp-api/Controllers'
+let g:netrw_dirhist_3='/Users/pem/dev/root/veteranapp-api'
+let g:netrw_dirhist_2='/Users/pem/dev/root/veteranapp-api/tests'
+let g:netrw_dirhist_1='/Users/pem/dev/root/veteranapp-api'
